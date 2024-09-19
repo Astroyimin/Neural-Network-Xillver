@@ -4,7 +4,7 @@
 
 ## Model Structure
 
-The model has 6 linear layers, after that a `*tanh*` activation is applied.
+The model has 6 linear layers, after that a `tanh` activation is applied.
 
 **Physical loss function**
 
