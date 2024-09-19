@@ -1,8 +1,10 @@
 # Neural Network Xillver
  This repository is to convert xillver table model to neural netwok. The goal is to accelerate the reading table process in relxill 
 
-**Model structure**
-The model has 6 linear layers, follow a tanh activation.
+
+## Model Structure
+
+The model has 6 linear layers, follow a *tanh* activation.
 
 Due to many line emission features at 0.1-1keV, we introduce a physical reasonable loss function, which correspond the related part in spectrum.
 
@@ -16,12 +18,19 @@ Due to many line emission features at 0.1-1keV, we introduce a physical reasonab
 
  # Do MSE for this part
  emis_dif = torch.mean(torch.abs(realsum-presum)**2/linerang_pred.size(1))
-
- return emis_dif 
 ```
 
-**Spectra properties**
-As same with *xillver* [see [Garcia 2013](https://arxiv.org/abs/1303.2112)], the spectrum has 3000 energy grids, the fits file is available on [relxill](https://www.sternwarte.uni-erlangen.de/~dauser/research/relxill/).
+## Spectra properties
+
+As same with *xillver* [see [Garcia 2013](https://arxiv.org/abs/1303.2112)], the spectrum has 3000 energy grids, the fits file is available on [relxill](https://www.sternwarte.uni-erlangen.de/~dauser/research/relxill/). 
+
+Our neural network model shows good ability to map the input parameters to the spectrum. The result is show in `result`. 
+
+Trained model store in `model`
+
+# Acknowledge
+[relxill v2.3.3](https://www.sternwarte.uni-erlangen.de/~dauser/research/relxill/),[HEAsoft v6.31.1](https://heasarc.gsfc.nasa.gov/docs/software/heasoft/),Python 3.8.19,cuda 12.1,torch 2.4.0+cu121
+
 
 
 
