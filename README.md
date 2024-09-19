@@ -29,7 +29,7 @@ The model receive 5 physical parameter as describe in [Garcia 2013](https://arxi
 1. Photon Index
 2. Iron Abundance
 3. High energy Ecut [keV]
-4. Log$\xi$
+4. Logxi
 5. Inclination
 
 The boundary is same with corresponding table model. If one want to use this model to get reflected spectrum, **the normalization of input parameters is necessary**. Our normalization are showed in `load_data.py`, the normalization of parameters as follows:
