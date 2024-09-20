@@ -26,11 +26,13 @@ Due to many line emission features at 0.1-1keV, we introduce a physical reasonab
 
 The model receive 5 physical parameter as describe in [Garcia 2013](https://arxiv.org/abs/1303.2112). 
 
+```
 1. Photon Index
 2. Iron Abundance
 3. High energy Ecut [keV]
 4. Logxi
 5. Inclination
+```
 
 The boundary is same with corresponding table model. If one want to use this model to get reflected spectrum, **the normalization of input parameters is necessary**. Our normalization are showed in `load_data.py`, the normalization of parameters as follows:
 
